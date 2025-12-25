@@ -1,10 +1,22 @@
-
-
 .odezdaMain{
-    margin: 0 auto;
+        justify-content: center;
     display: flex;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+
 }
 
 .backButton{
-    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    margin: 1em;
+    background-color: rgba(76, 0, 130, 0.349);
+    border-radius: 20px;
+    border: solid 1px indigo;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
