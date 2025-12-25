@@ -6,7 +6,10 @@ function Tech() {
       <div className='Techmain'>
         <a className='back' href="/">назад</a>
         <div className='header'>Магазин бытовой техники</div>
-        <div className='tablekist'>
+        <div className='tablelist'>
+        <button>Товары</button>
+        <button>Заказы</button>
+        <button>Сотрудники</button>
         </div>    
       </div>
   )
