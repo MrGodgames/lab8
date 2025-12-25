@@ -1,12 +1,13 @@
 import './App.css'
-import { useState } from 'react'
 import './gordienko.css'
 function Tech() {
   return (
 
       <div className='Techmain'>
-        <button className='back'><a href="/">назад</a></button>
+        <a className='back' href="/">назад</a>
         <div className='header'>Магазин бытовой техники</div>
+        <div className='tablekist'>
+        </div>    
       </div>
   )
 }

@@ -1,19 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Science+Gothic:wght@100..900&display=swap');
 .Techmain{
+    font-family: "Science Gothic", sans-serif;
     display: flex;
-    margin: 0 auto;
 }
 .back{
+    background-color: cadetblue;
+    color: black;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
     display: flex;
+    z-index: 100;
+    position: fixed;
 }
 .header{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
     position: fixed;
-    top: 0;
+    margin-top: 15px;
+    font-size: 40px;
     left: 0;
     right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
