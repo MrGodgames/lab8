@@ -1,0 +1,10 @@
+
+
+.odezdaMain{
+    margin: 0 auto;
+    display: flex;
+}
+
+.backButton{
+    background-color: aqua;
+}
