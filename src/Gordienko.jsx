@@ -4,9 +4,9 @@ import './gordienko.css'
 function Tech() {
   return (
 
-      <div>
+      <div className='Techmain'>
         <button className='back'><a href="/">назад</a></button>
-        <h1>Магазин бытовой техники</h1>
+        <div className='header'>Магазин бытовой техники</div>
       </div>
   )
 }
