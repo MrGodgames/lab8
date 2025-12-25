@@ -8,7 +8,10 @@ function Odezda() {
 
       <div className='odezdaMain'>
         <a href="/" className='backButton'>назад</a>
-        <div className='logo'><h1>Магазин одежды</h1></div>
+        <div className='mainContent'>
+          <div className='head'><h1>Магазин одежды</h1></div>
+          <div className='table'>Выберете табличку</div>
+        </div>
       </div>
   )
 }
