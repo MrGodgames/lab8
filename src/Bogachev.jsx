@@ -6,8 +6,8 @@ import './Bogachev.css'
 function Odezda() {
   return (
 
-      <div>
-        <button><a href="/">назад</a></button>
+      <div className='odezdaMain'>
+        <button className='backButton'><a href="/">назад</a></button>
         <h1>Магазин одежды</h1>
       </div>
   )
