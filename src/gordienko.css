@@ -39,13 +39,111 @@
     text-align: center;
     gap: 20px;
     margin-left: 45%;
+    
 }
-.tablelist button{
+.tablelist button {
     background-color: cadetblue;
-    color: white;
     border-radius: 20px;
     padding: 20px;
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+.tablelist a{
+    text-decoration: none;
+    color: white;
+}
+
+.data-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.data-form input{
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.data-form button{
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.delete-button{
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.edit-button{
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.save-button{
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.cancel-button{
+    background-color: #777;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.data-table input{
+    width: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+.tablewrap{
+    width: 100%;
+    margin: 160px 40px 40px;
+}
+
+.data-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.data-table th,
+.data-table td{
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.data-table th{
+    background-color: #f0f0f0;
+}
+
+.table-error{
+    color: #b00020;
 }
