@@ -26,6 +26,14 @@ CREATE TABLE IF NOT EXISTS tech_sotrud (
   hire_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
+CREATE TABLE IF NOT EXISTS tech_postavshik (
+  id SERIAL PRIMARY KEY,
+  company_name TEXT NOT NULL,
+  contact_name TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  city TEXT NOT NULL
+);
+
 INSERT INTO tech_tovar (name, category, price, stock) VALUES
   ('Холодильник Atlant', 'Холодильники', 35990.00, 6),
   ('Стиральная машина LG', 'Стиральные машины', 41990.00, 3),
@@ -40,6 +48,11 @@ INSERT INTO tech_sotrud (full_name, position, phone, hire_date) VALUES
   ('Сергей Иванов', 'менеджер', '+7-900-123-45-67', '2023-05-01'),
   ('Ольга Николаева', 'кассир', '+7-900-222-11-44', '2022-09-15'),
   ('Алексей Фомин', 'кладовщик', '+7-900-555-77-99', '2021-03-20');
+
+INSERT INTO tech_postavshik (company_name, contact_name, phone, city) VALUES
+  ('ElectroHome', 'Ирина Волкова', '+7-905-111-22-33', 'Москва'),
+  ('Tech Supply', 'Артем Орлов', '+7-905-444-55-66', 'Самара'),
+  ('MegaParts', 'Елена Смирнова', '+7-905-777-88-99', 'Казань');
 
 CREATE TABLE IF NOT EXISTS odezda_tovar (
   id SERIAL PRIMARY KEY,

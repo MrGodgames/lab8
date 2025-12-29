@@ -231,6 +231,75 @@ app.put('/api/tech/sotrud/:id', async (req, res) => {
   }
 })
 
+app.get('/api/tech/postavshik', async (req, res) => {
+  try {
+    const { rows } = await pool.query(
+      'SELECT id, company_name, contact_name, phone, city FROM tech_postavshik ORDER BY id'
+    )
+    res.json(rows)
+  } catch (error) {
+    res.status(500).json({ error: 'Ошибка чтения таблицы поставщиков.' })
+  }
+})
+
+app.post('/api/tech/postavshik', async (req, res) => {
+  const { company_name, contact_name, phone, city } = req.body ?? {}
+  if (!company_name || !contact_name || !phone || !city) {
+    return res.status(400).json({ error: 'Нужно заполнить все поля поставщика.' })
+  }
+
+  try {
+    const { rows } = await pool.query(
+      'INSERT INTO tech_postavshik (company_name, contact_name, phone, city) VALUES ($1, $2, $3, $4) RETURNING id, company_name, contact_name, phone, city',
+      [company_name, contact_name, phone, city]
+    )
+    res.status(201).json(rows[0])
+  } catch (error) {
+    res.status(500).json({ error: 'Ошибка добавления поставщика.' })
+  }
+})
+
+app.delete('/api/tech/postavshik/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  if (!Number.isInteger(id)) {
+    return res.status(400).json({ error: 'Неверный id поставщика.' })
+  }
+
+  try {
+    const result = await pool.query('DELETE FROM tech_postavshik WHERE id = $1', [id])
+    if (result.rowCount === 0) {
+      return res.status(404).json({ error: 'Поставщик не найден.' })
+    }
+    res.json({ ok: true })
+  } catch (error) {
+    res.status(500).json({ error: 'Ошибка удаления поставщика.' })
+  }
+})
+
+app.put('/api/tech/postavshik/:id', async (req, res) => {
+  const id = Number(req.params.id)
+  const { company_name, contact_name, phone, city } = req.body ?? {}
+  if (!Number.isInteger(id)) {
+    return res.status(400).json({ error: 'Неверный id поставщика.' })
+  }
+  if (!company_name || !contact_name || !phone || !city) {
+    return res.status(400).json({ error: 'Нужно заполнить все поля поставщика.' })
+  }
+
+  try {
+    const { rows } = await pool.query(
+      'UPDATE tech_postavshik SET company_name = $1, contact_name = $2, phone = $3, city = $4 WHERE id = $5 RETURNING id, company_name, contact_name, phone, city',
+      [company_name, contact_name, phone, city, id]
+    )
+    if (rows.length === 0) {
+      return res.status(404).json({ error: 'Поставщик не найден.' })
+    }
+    res.json(rows[0])
+  } catch (error) {
+    res.status(500).json({ error: 'Ошибка редактирования поставщика.' })
+  }
+})
+
 app.get('/api/odezda/tovar', async (req, res) => {
   try {
     const { rows } = await pool.query(

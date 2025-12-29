@@ -10,6 +10,7 @@ function Tech() {
         <button><NavLink to="/techtovar">Товары</NavLink></button>
         <button><NavLink to="/techzakaz">Заказы</NavLink></button>
         <button><NavLink to="/techsotrud">Сотрудники</NavLink></button>
+        <button><NavLink to="/techpostavshik">Поставщики</NavLink></button>
         </div>    
       </div>
   )
