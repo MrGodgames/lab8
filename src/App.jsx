@@ -5,6 +5,10 @@ import Odezda from './Bogachev.jsx'
 import TechTovar from './techtables/techtovar';
 import TechZakaz from './techtables/techzakaz';
 import TechSotrud from './techtables/techsotrud';
+import OdezdaTovar from './odezdatables/odezdatovar';
+import OdezdaZakaz from './odezdatables/odezdazakaz';
+import OdezdaKlient from './odezdatables/odezdaklient';
+import OdezdaPostavshik from './odezdatables/odezdapostavshik';
 
 function Home() {
   return (
@@ -22,6 +26,10 @@ function App() {
       <Route path="/techtovar" element={<TechTovar />} />
       <Route path="/techzakaz" element={<TechZakaz />} />
       <Route path="/techsotrud" element={<TechSotrud />} />
+      <Route path="/odezdatovar" element={<OdezdaTovar />} />
+      <Route path="/odezdazakaz" element={<OdezdaZakaz />} />
+      <Route path="/odezdaklient" element={<OdezdaKlient />} />
+      <Route path="/odezdapostavshik" element={<OdezdaPostavshik />} />
       <Route path="/" element={<Home />} />
       <Route path="/Tech" element={<Tech />} />
       <Route path="/Odezda" element={<Odezda />} />
