@@ -12,10 +12,12 @@ import OdezdaPostavshik from './odezdatables/odezdapostavshik';
 
 function Home() {
   return (
-    <div>
-      <h1>выбрать базу данных</h1>
-      <button><NavLink to="/Odezda">Богачев</NavLink></button>
-      <button><NavLink to="/Tech">Гордиенко</NavLink></button>
+    <div className="home">
+      <h1 className="home-title">Выбрать базу данных</h1>
+      <div className="home-actions">
+        <button><NavLink to="/Odezda">Богачев</NavLink></button>
+        <button><NavLink to="/Tech">Гордиенко</NavLink></button>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Science+Gothic:wght@100..900&display=swap');
-*{
+.Techmain,
+.Techmain *{
     font-family: "Science Gothic", sans-serif;
 }
 .Techmain{
