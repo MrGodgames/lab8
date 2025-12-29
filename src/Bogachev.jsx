@@ -13,7 +13,8 @@ function Odezda() {
           <div className='table'>Выберете табличку</div>
         </div>
       </div>
+
+
   )
 }
-
 export default Odezda
