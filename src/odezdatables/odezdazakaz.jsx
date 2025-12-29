@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import '../gordienko.css'
+import './odezda.css'
 
 const API_BASE = 'http://localhost:3001'
 
@@ -158,7 +158,7 @@ function OdezdaZakaz() {
   }
 
   return (
-      <div className='Techmain'>
+      <div className='Techmain odezda-page'>
         <NavLink className='back' to="/Odezda">назад</NavLink>
         <div className='tablewrap'>
           <h2>Заказы</h2>

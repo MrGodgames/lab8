@@ -1,0 +1,122 @@
+.odezda-page{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    color: #2f2438;
+}
+
+.odezda-page .back{
+    background-color: rgba(76, 0, 130, 0.5);
+    color: #2f2438;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: flex;
+    z-index: 100;
+    position: fixed;
+    border: 1px solid indigo;
+}
+
+.odezda-page .tablewrap{
+    width: 100%;
+    margin: 160px 40px 40px;
+}
+
+.odezda-page h2{
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    color: #3a1f5c;
+}
+
+.odezda-page .data-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.odezda-page .data-form input{
+    padding: 8px 10px;
+    border: 1px solid #d5c6f5;
+    border-radius: 8px;
+    background-color: #fbf9ff;
+}
+
+.odezda-page .data-form button{
+    background-color: indigo;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.odezda-page .data-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.odezda-page .data-table th,
+.odezda-page .data-table td{
+    border: 1px solid #d8c7f5;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.odezda-page .data-table th{
+    background-color: #e7dbff;
+}
+
+.odezda-page .data-table input{
+    width: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border: 1px solid #d5c6f5;
+    border-radius: 6px;
+}
+
+.odezda-page .table-error{
+    color: #7a1fa2;
+}
+
+.odezda-page .delete-button{
+    background-color: #a13b95;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.odezda-page .edit-button{
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.odezda-page .save-button{
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.odezda-page .cancel-button{
+    background-color: #6b5b95;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    margin-right: 6px;
+}
